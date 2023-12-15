@@ -1,0 +1,17 @@
+C:\repositorio git\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+C:\repositorio git\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
+C:\repositorio git\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+C:\repositorio git\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+C:\repositorio git\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Entities.dll
+C:\repositorio git\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Entities.pdb
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
+C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
