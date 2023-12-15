@@ -4,8 +4,8 @@ using Domain.Services;
 using Entities.DTOs.UserDTO;
 using Entities.Models;
 using Infrastructure.Data;
+using Infrastructure.Services.Token;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Metadata;
 
 namespace Domain.Repositories
 {
@@ -134,7 +134,7 @@ namespace Domain.Repositories
             }
         }
 
-        public async Task<bool> Login(LoginRequest request)
+        public async Task<string> Login(LoginRequest request)
         {
             try
             {
@@ -146,9 +146,11 @@ namespace Domain.Repositories
 
                     if (passwordRequestHash.Equals(user.PasswordHash))
                     {
-                        return true;
+                        string token = TokenService.GenerateToken(user);
 
-                    } else { return false; }
+                        return token;
+
+                    } else { throw new Exception("Senha incorreta"); }
                 } else
                 {
                     throw new Exception("Usuário não encontrado");

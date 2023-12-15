@@ -50,6 +50,10 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(11)");
 
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
+
                     b.Property<string>("Salt")
                         .IsRequired()
                         .HasColumnType("varchar(100)");
@@ -59,6 +63,9 @@ namespace Infrastructure.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email", "UserName")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

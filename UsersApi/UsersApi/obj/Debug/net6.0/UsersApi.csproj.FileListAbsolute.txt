@@ -62,3 +62,11 @@ C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\AutoMapper.dll
 C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\Domain.dll
 C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\Domain.pdb
+C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\repositorio git\UserApi\UsersApi\UsersApi\bin\Debug\net6.0\System.Security.Permissions.dll

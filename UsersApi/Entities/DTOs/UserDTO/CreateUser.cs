@@ -18,5 +18,6 @@ namespace Entities.DTOs.UserDTO
         [Required]
         [Compare("Password")]
         public string RePassword { get; set; }
+        public string Role { get; set; }
     }
 }

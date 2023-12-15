@@ -2,7 +2,7 @@
 using Entities.DTOs.UserDTO;
 using Entities.Models;
 
-namespace Infrastructure.Mappers
+namespace Infrastructure.Services.Mappers
 {
     public class UserMapping : Profile
     {

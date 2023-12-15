@@ -34,12 +34,19 @@ namespace Infrastructure.Data.Configuration
                 .HasColumnType("varchar(100)")
                 .IsRequired();
 
+            builder.Property(u => u.Role)
+                .HasColumnType("varchar(25)")
+                .IsRequired();
+
             builder.Property(u => u.CreationDate)
                 .HasColumnType("datetime")
                 .IsRequired();
 
             builder.Property(u => u.ModificationDate)
                 .HasColumnType("datetime");
+
+            builder.HasIndex(u => new { u.Email, u.UserName })
+                .IsUnique();
         }
     }
 }

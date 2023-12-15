@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20231215052024_Initial-Migration")]
-    partial class InitialMigration
+    [Migration("20231215181436_initial-migration")]
+    partial class initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,10 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(11)");
 
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
+
                     b.Property<string>("Salt")
                         .IsRequired()
                         .HasColumnType("varchar(100)");
@@ -62,6 +66,9 @@ namespace Infrastructure.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email", "UserName")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

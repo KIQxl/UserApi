@@ -15,6 +15,7 @@ namespace Entities.Models
         public string UserName { get; set; }
         public string PasswordHash { get; set; }
         public string Salt { get; set; }
+        public string Role { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime? ModificationDate { get; set;}
     }
