@@ -49,6 +49,19 @@ namespace UsersApi.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("GetViewByUsername/{username}")]
+        public async Task<IActionResult> GetByUserName([FromRoute] string userName)
+        {
+            try
+            {
+                UserView user = await _userRepository.GetUserViewByUserName(userName);
+                return Ok(user);
+            } catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
         [HttpPost]
         [Route("CreateUser")]
@@ -93,7 +106,11 @@ namespace UsersApi.Controllers
             {
                 bool result = await _userRepository.DeleteUser(id);
 
-                return Ok(result);
+                return Ok( new
+                {
+                    result = result,
+                    message = "Usuário deletado com sucesso"
+                });
             }
             catch (Exception ex)
             {
@@ -108,12 +125,74 @@ namespace UsersApi.Controllers
             try
             {
                 string token = await _userRepository.Login(request);
-                return Ok(token);
+                UserView user = await _userRepository.GetUserViewByUserName(request.UserName);
+                return Ok( new
+                {
+                    user = user,
+                    token = token
+                });
 
             } catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             } 
         }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [Route("ActivateUser/{id}")]
+        public async Task<IActionResult> ActivateUser([FromRoute] int id)
+        {
+            try
+            {
+                bool result = await _userRepository.ActivateUser(id);
+                return Ok(new
+                {
+                    result = result,
+                    message = "Usuário Ativado com sucesso"
+                });
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [Route("DeativateUser/{id}")]
+        public async Task<IActionResult> DeactivateUser([FromRoute] int id)
+        {
+            try
+            {
+                bool result = await _userRepository.DeactivateUser(id);
+                return Ok(new
+                {
+                    result = result,
+                    message = "Usuário Desativado com sucesso"
+                });
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        //[HttpGet]
+        //[Route("{id}")]
+        //public async Task<IActionResult> Dapper([FromRoute] int id)
+        //{
+        //    try
+        //    {
+        //        UserView user = await _userRepository.Dapper(id);
+        //        return Ok(user);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
     }
 }

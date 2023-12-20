@@ -10,3 +10,14 @@ C:\repositorio git\UserApi\UsersApi\Entities\obj\Debug\net6.0\Entities.dll
 C:\repositorio git\UserApi\UsersApi\Entities\obj\Debug\net6.0\refint\Entities.dll
 C:\repositorio git\UserApi\UsersApi\Entities\obj\Debug\net6.0\Entities.pdb
 C:\repositorio git\UserApi\UsersApi\Entities\obj\Debug\net6.0\ref\Entities.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\bin\Debug\net6.0\Entities.deps.json
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\bin\Debug\net6.0\Entities.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\bin\Debug\net6.0\Entities.pdb
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\obj\Debug\net6.0\Entities.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\obj\Debug\net6.0\refint\Entities.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\obj\Debug\net6.0\Entities.pdb
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Entities\obj\Debug\net6.0\ref\Entities.dll

@@ -36,7 +36,8 @@ namespace Infrastructure.Migrations
                     Role = table.Column<string>(type: "varchar(25)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     CreationDate = table.Column<DateTime>(type: "datetime", nullable: false),
-                    ModificationDate = table.Column<DateTime>(type: "datetime", nullable: true)
+                    ModificationDate = table.Column<DateTime>(type: "datetime", nullable: true),
+                    IsActive = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {

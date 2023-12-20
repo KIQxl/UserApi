@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Castle.Core.Configuration;
+using Dapper;
 using Domain.Interfaces;
 using Domain.Services;
 using Entities.DTOs.UserDTO;
@@ -6,6 +8,7 @@ using Entities.Models;
 using Infrastructure.Data;
 using Infrastructure.Services.Token;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 
 namespace Domain.Repositories
 {
@@ -13,6 +16,7 @@ namespace Domain.Repositories
     {
         public readonly UserContext _context;
         public readonly IMapper _mapper;
+        
         public UserRepository(UserContext context, IMapper mapper)
         {
             this._context = context;
@@ -22,9 +26,15 @@ namespace Domain.Repositories
         {
             try
             {
-                var users = await _context.Users.ToListAsync();
+                using (var con = new MySqlConnection(_context.Database.GetConnectionString()))
+                {
+                    string sqlQuery =
+                        @"
+                            SELECT * FROM users WHERE IsActive = 1
+                        ";
 
-                return _mapper.Map<IEnumerable<UserView>>(users);
+                    return await con.QueryAsync<UserView>(sqlQuery);
+                }
 
             } catch(Exception ex)
             {
@@ -36,15 +46,40 @@ namespace Domain.Repositories
         {
             try
             {
-                User user = await _context.Users.FirstOrDefaultAsync(u => u.Id.Equals(id));
-
-                if (user == null)
+                using (var con = new MySqlConnection(_context.Database.GetConnectionString()))
                 {
-                    throw new Exception("Usuário não encontrado");
-                }
+                    string sqlQuery =
+                        @"
+                            SELECT * FROM users WHERE id = @id
+                        ";
 
-                return _mapper.Map<UserView>(user);
+                    var parameters = new {  id  };
+
+                    return await con.QueryFirstOrDefaultAsync<UserView>(sql: sqlQuery, param: parameters);
+                }
             } catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<UserView> GetUserViewByUserName(string userName)
+        {
+            try
+            {
+                using (var con = new MySqlConnection(_context.Database.GetConnectionString()))
+                {
+                    string sqlQuery =
+                        @"
+                            SELECT * FROM users WHERE UPPER(username) = @userName
+                        ";
+
+                    var parameters = new { userName };
+
+                    return await con.QueryFirstOrDefaultAsync<UserView>(sql: sqlQuery, param: parameters);
+                }
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -54,14 +89,17 @@ namespace Domain.Repositories
         {
             try
             {
-                User user = await _context.Users.FirstOrDefaultAsync(u => u.Id.Equals(id));
-
-                if (user == null)
+                using (var con = new MySqlConnection(_context.Database.GetConnectionString()))
                 {
-                    throw new Exception("Usuário não encontrado");
-                }
+                    string sqlQuery =
+                        @"
+                            SELECT * FROM users WHERE id = @id
+                        ";
 
-                return user;
+                    var parameters = new { id };
+
+                    return await con.QueryFirstOrDefaultAsync<User>(sql: sqlQuery, param: parameters);
+                }
             } catch (Exception ex)
             {
                 throw new Exception(ex.Message);
@@ -79,6 +117,7 @@ namespace Domain.Repositories
                 user.Salt = salt;
                 user.PasswordHash = passwordHash;
                 user.CreationDate = DateTime.Now;
+                user.IsActive = true;
 
                 await _context.AddAsync(user);
                 await _context.SaveChangesAsync();
@@ -103,6 +142,7 @@ namespace Domain.Repositories
                 user.Name = requestUpdate.Name;
                 user.Email = requestUpdate.Email;
                 user.Phone = requestUpdate.Phone;
+                user.ModificationDate = DateTime.Now;
 
                 await _context.SaveChangesAsync();
 
@@ -160,5 +200,58 @@ namespace Domain.Repositories
                 throw new Exception(ex.Message);
             }
         }
+
+        public async Task<bool> ActivateUser(int id)
+        {
+            try
+            {
+                User user = await GetUserById(id);
+
+                if (user == null) { throw new Exception("Usuário não encontrado");}
+
+                user.IsActive = true;
+                await _context.SaveChangesAsync();
+
+                return true;
+            } catch { return false; }
+        }
+
+        public async Task<bool> DeactivateUser(int id)
+        {
+            try
+            {
+                User user = await GetUserById(id);
+
+                if (user == null) 
+                { 
+                    throw new Exception("Usuário não encontrado"); 
+                }
+
+                user.IsActive = false;
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch { return false; }
+        }
+
+        //public async Task<UserView> Dapper(int id)
+        //{
+        //    try
+        //    {
+        //        using(var con = new MySqlConnection(_context.Database.GetConnectionString()))
+        //        {
+        //            string sqlQuery = 
+        //                @"
+        //                    SELECT * FROM users WHERE id = @id
+        //                ";
+
+        //            var parameters = new { id };
+
+        //            return await con.QueryFirstOrDefaultAsync<UserView>(sqlQuery, parameters);
+        //        }
+        //    }
+        //    catch { throw new Exception(); }
+        //}
     }
 }

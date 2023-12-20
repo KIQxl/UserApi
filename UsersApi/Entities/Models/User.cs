@@ -18,5 +18,6 @@ namespace Entities.Models
         public string Role { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime? ModificationDate { get; set;}
+        public bool IsActive { get; set;}
     }
 }

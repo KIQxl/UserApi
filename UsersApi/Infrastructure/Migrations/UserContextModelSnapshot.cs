@@ -35,6 +35,9 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<DateTime?>("ModificationDate")
                         .HasColumnType("datetime");
 

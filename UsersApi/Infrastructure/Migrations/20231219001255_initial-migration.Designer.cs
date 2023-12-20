@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20231215181436_initial-migration")]
+    [Migration("20231219001255_initial-migration")]
     partial class initialmigration
     {
         /// <inheritdoc />
@@ -37,6 +37,9 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("varchar(100)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("ModificationDate")
                         .HasColumnType("datetime");

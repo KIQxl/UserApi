@@ -47,6 +47,19 @@
           }
         }
       },
+      "Dapper/2.1.24": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1205,6 +1218,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "Dapper": "2.1.24",
           "Entities": "1.0.0",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.14",
@@ -1273,6 +1287,27 @@
         "lib/netstandard2.1/Castle.Core.dll",
         "lib/netstandard2.1/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "Dapper/2.1.24": {
+      "sha512": "/2t2vsdJyZRsk13AsWigZpsuFvEwK+o3v862cEULXoww905gyKhJFSuwmZI/4Ui9COX9ZCFCI09UHyH4wVYl3A==",
+      "type": "package",
+      "path": "dapper/2.1.24",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.24.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/net7.0/Dapper.dll",
+        "lib/net7.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -2828,19 +2863,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kaiqu\\.nuget\\packages\\": {}
+    "C:\\Users\\Caiaque\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repositorio git\\UserApi\\UsersApi\\UsersApi\\UsersApi.csproj",
+      "projectUniqueName": "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\UsersApi\\UsersApi.csproj",
       "projectName": "UsersApi",
-      "projectPath": "C:\\repositorio git\\UserApi\\UsersApi\\UsersApi\\UsersApi.csproj",
-      "packagesPath": "C:\\Users\\kaiqu\\.nuget\\packages\\",
-      "outputPath": "C:\\repositorio git\\UserApi\\UsersApi\\UsersApi\\obj\\",
+      "projectPath": "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\UsersApi\\UsersApi.csproj",
+      "packagesPath": "C:\\Users\\Caiaque\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\UsersApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kaiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Caiaque\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2854,11 +2889,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\repositorio git\\UserApi\\UsersApi\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\repositorio git\\UserApi\\UsersApi\\Domain\\Domain.csproj"
+            "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\Domain\\Domain.csproj"
             },
-            "C:\\repositorio git\\UserApi\\UsersApi\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\repositorio git\\UserApi\\UsersApi\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -2903,7 +2938,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

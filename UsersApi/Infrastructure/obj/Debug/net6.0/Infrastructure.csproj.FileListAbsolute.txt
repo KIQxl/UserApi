@@ -15,3 +15,20 @@ C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\refint\Infra
 C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
 C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
 C:\repositorio git\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Entities.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\bin\Debug\net6.0\Entities.pdb
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
+C:\Users\Caiaque\Desktop\projects\UserApi\UsersApi\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll

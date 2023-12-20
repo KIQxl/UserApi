@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kaiqu\\.nuget\\packages\\": {}
+    "C:\\Users\\Caiaque\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repositorio git\\UserApi\\UsersApi\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\repositorio git\\UserApi\\UsersApi\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\kaiqu\\.nuget\\packages\\",
-      "outputPath": "C:\\repositorio git\\UserApi\\UsersApi\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\Caiaque\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Caiaque\\Desktop\\projects\\UserApi\\UsersApi\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kaiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Caiaque\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
